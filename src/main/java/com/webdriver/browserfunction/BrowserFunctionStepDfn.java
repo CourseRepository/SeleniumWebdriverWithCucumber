@@ -3,6 +3,8 @@ package com.webdriver.browserfunction;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.webdriver.helper.BrowserHelper;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -11,11 +13,13 @@ public class BrowserFunctionStepDfn {
 	
 	private WebDriver driver;
 	private WebDriver.Navigation navigate;
+	private BrowserHelper browserHelper;
 	
 	@Given("^BrowserFunction_I have chrome driver instance$")
 	public void browserfunction_i_have_chrome_driver_instance() throws Throwable {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\rathr1\\Downloads\\chromedriver_win32\\chromedriver.exe");
 		driver = new ChromeDriver();
+		browserHelper = BrowserHelper.getInstance(driver);
 	}
 	
 	@Given("^BrowserFucntion_I call the get with url \"([^\"]*)\" then it should open the page$")
@@ -25,18 +29,21 @@ public class BrowserFunctionStepDfn {
 	
 	@Then("^BrowserFunction_I call the back api this should navigate back in the browser$")
 	public void browserfunction_i_call_the_back_api_this_should_navigate_back_in_the_browser() throws Throwable {
-	   navigate = driver.navigate();
-	   navigate.back();
+	  /* navigate = driver.navigate();
+	   navigate.back();*/
+		browserHelper.moveBackword();
 	}
 
 	@Then("^BrowserFunction_I call the forward api this should move forward in the browser$")
 	public void browserfunction_i_call_the_forward_api_this_should_move_forward_in_the_browser() throws Throwable {
-	    navigate.forward();
+	   // navigate.forward();
+		browserHelper.moveForward();
 	}
 
 	@Then("^BrowserFunction_I call the refresh api this should refresh the webpage$")
 	public void browserfunction_i_call_the_refresh_api_this_should_refresh_the_webpage() throws Throwable {
-	   navigate.refresh();
+	  // navigate.refresh();
+		browserHelper.refresh();
 	}
 	
 	@When("^BrowserFunction_I call the maximize metho$")
@@ -44,7 +51,8 @@ public class BrowserFunctionStepDfn {
 		/*WebDriver.Options option = driver.manage();
 		WebDriver.Window window = option.window();
 		window.maximize();*/
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
+		browserHelper.maximize();
 	}
 
 	
