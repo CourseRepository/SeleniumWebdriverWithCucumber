@@ -25,6 +25,7 @@ public class BrowserFunctionStepDfn {
 	@Given("^BrowserFucntion_I call the get with url \"([^\"]*)\" then it should open the page$")
 	public void browserfucntion_i_call_the_get_with_url_then_it_should_open_the_page(String url) throws Throwable {
 		driver.get(url);
+		browserHelper = BrowserHelper.getInstance(driver);
 	}
 	
 	@Then("^BrowserFunction_I call the back api this should navigate back in the browser$")

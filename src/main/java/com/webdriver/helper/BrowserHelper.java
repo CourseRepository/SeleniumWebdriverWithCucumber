@@ -5,14 +5,14 @@ import org.openqa.selenium.WebDriver;
 public class BrowserHelper {
 	
 	private static BrowserHelper browserHelper;
-	private static WebDriver webDriver;
+	private static WebDriver wdDrvier;
 	
 	private BrowserHelper(WebDriver driver){
-		webDriver = driver;
+		wdDrvier = driver;
 	}
 	
 	public static BrowserHelper getInstance(WebDriver driver){
-		if(browserHelper == null || webDriver.hashCode() != driver.hashCode())
+		if(browserHelper == null || wdDrvier.hashCode() != driver.hashCode())
 			browserHelper = new BrowserHelper(driver);
 		return browserHelper;
 	}
@@ -26,19 +26,19 @@ public class BrowserHelper {
 	
 	
 	public void moveForward(){
-		webDriver.navigate().forward();
+		wdDrvier.navigate().forward();
 	}
 	
 	public void moveBackword(){
-		webDriver.navigate().back();
+		wdDrvier.navigate().back();
 	}
 	
 	public void refresh(){
-		webDriver.navigate().refresh();
+		wdDrvier.navigate().refresh();
 	}
 	
 	public void maximize(){
-		webDriver.manage().window().maximize();
+		wdDrvier.manage().window().maximize();
 	}
 
 }
