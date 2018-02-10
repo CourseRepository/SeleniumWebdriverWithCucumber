@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.webdriver.helper.BrowserHelper;
+import com.webdriver.helper.TextBoxHelper;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -15,11 +16,13 @@ public class BrowserFunctionStepDfn {
 	private WebDriver.Navigation navigate;
 	private BrowserHelper browserHelper;
 	
+	
 	@Given("^BrowserFunction_I have chrome driver instance$")
 	public void browserfunction_i_have_chrome_driver_instance() throws Throwable {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\rathr1\\Downloads\\chromedriver_win32\\chromedriver.exe");
 		driver = new ChromeDriver();
 		browserHelper = BrowserHelper.getInstance(driver);
+		
 	}
 	
 	@Given("^BrowserFucntion_I call the get with url \"([^\"]*)\" then it should open the page$")
