@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.webdriver.helper.BrowserHelper;
 import com.webdriver.helper.ButtonHelper;
+import com.webdriver.helper.DropdownHelper;
 import com.webdriver.helper.TextBoxHelper;
 
 import cucumber.api.java.en.Given;
@@ -24,6 +25,7 @@ public class WebElementStepDfn {
 	private List<WebElement> elementList;
 	private TextBoxHelper textBoxHelper;
 	private ButtonHelper buttonHelper;
+	private DropdownHelper dropDownHelper;
 
 	@Given("^WebElementFunction_I open the face book home page \"([^\"]*)\"$")
 	public void webelementfunction_i_open_the_face_book_home_page(String url) throws Throwable {
@@ -33,6 +35,7 @@ public class WebElementStepDfn {
 		browserHelper = BrowserHelper.getInstance(driver);
 		textBoxHelper = TextBoxHelper.getInstance(driver);
 		buttonHelper = ButtonHelper.getInstance(driver);
+		dropDownHelper = DropdownHelper.getInstance(driver);
 		browserHelper.maximize();
 		driver.get(url);
 	}
@@ -103,30 +106,37 @@ public class WebElementStepDfn {
 
 	@When("^WebElementFunction_I call select by visible text on dropdown it should select the value based on ui$")
 	public void webelementfunction_i_call_select_by_visible_text_on_dropdown_it_should_select_the_value_based_on_ui() throws Throwable {
-		element = driver.findElement(By.cssSelector("#month"));
+		/*element = driver.findElement(By.cssSelector("#month"));
 		Select select = new Select(element);
-		select.selectByVisibleText("Nov");
+		select.selectByVisibleText("Nov");*/
+		dropDownHelper.selectByVisibleText(By.cssSelector("#month"), "Nov");
 	}
 	
 	@When("^WebElementFunction_I call select by index text on dropdown it should select the value based on index$")
 	public void webelementfunction_i_call_select_by_index_text_on_dropdown_it_should_select_the_value_based_on_index() throws Throwable {
-		element = driver.findElement(By.cssSelector("#month"));
+		/*element = driver.findElement(By.cssSelector("#month"));
 		Select select = new Select(element);
 		select.selectByIndex(2); // Selection based on index
-	}
+		 */
+		dropDownHelper.selectByIndex(By.cssSelector("#month"), 2);
+		}
 	
 	@When("^WebElementFunction_I call select by value text on dropdown it should select the value based on value attribute in drop down$")
 	public void webelementfunction_i_call_select_by_value_text_on_dropdown_it_should_select_the_value_based_on_value_attribute_in_drop_down() throws Throwable {
-		element = driver.findElement(By.cssSelector("#month"));
+		/*element = driver.findElement(By.cssSelector("#month"));
 		Select select = new Select(element);
-		select.selectByValue("0"); // Selection based in value attribute
+		select.selectByValue("0");*/ // Selection based in value attribute
+		dropDownHelper.selectByValue(By.cssSelector("#month"), "0");
 	}
 	
 	@When("^WebElementFunction_I call getOptions on dropdown it should list all the vlaue in dropdown$")
 	public void webelementfunction_i_call_getOptions_on_dropdown_it_should_list_all_the_vlaue_in_dropdown() throws Throwable {
-		element = driver.findElement(By.cssSelector("#month"));
-		Select select = new Select(element);
-		System.out.println(select.getOptions().size());
+		/*element = driver.findElement(By.cssSelector("#month"));
+		Select select = new Select(element);*/
+		elementList = dropDownHelper.getAllValues(By.cssSelector("#month"));
+		System.out.println(elementList.size());
+		for(WebElement ele : elementList)
+			System.out.println(ele.getText());
 	}
 		
 	@When("^WebElementFunction_I call the quit method the browser will close$")
