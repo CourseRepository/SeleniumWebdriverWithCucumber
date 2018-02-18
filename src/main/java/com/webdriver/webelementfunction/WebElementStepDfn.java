@@ -5,9 +5,8 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
 
+import com.webdriver.browser.CustomChromeDriver;
 import com.webdriver.helper.BrowserHelper;
 import com.webdriver.helper.ButtonHelper;
 import com.webdriver.helper.DropdownHelper;
@@ -29,9 +28,12 @@ public class WebElementStepDfn {
 
 	@Given("^WebElementFunction_I open the face book home page \"([^\"]*)\"$")
 	public void webelementfunction_i_open_the_face_book_home_page(String url) throws Throwable {
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\rathr1\\Downloads\\chromedriver_win32\\chromedriver.exe");
-		driver = new ChromeDriver();
+		CustomChromeDriver chromeDriver = new CustomChromeDriver();
+		driver = chromeDriver.getChromeDriver();
+		
+		/*CustomFirefoxDriver firefoxDriver = new CustomFirefoxDriver();
+		driver = firefoxDriver.getFirefoxDriver();*/
+		
 		browserHelper = BrowserHelper.getInstance(driver);
 		textBoxHelper = TextBoxHelper.getInstance(driver);
 		buttonHelper = ButtonHelper.getInstance(driver);
