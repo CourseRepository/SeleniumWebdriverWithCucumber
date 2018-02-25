@@ -2,19 +2,19 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="60640" started-at="2018-02-24T08:06:29Z" finished-at="2018-02-24T08:07:29Z">
+  <suite name="Default suite" duration-ms="45393" started-at="2018-02-25T07:44:29Z" finished-at="2018-02-25T07:45:14Z">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.wait.WebdriverWaitFunctionRunner@188715b5]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="60640" started-at="2018-02-24T08:06:29Z" finished-at="2018-02-24T08:07:29Z">
+    <test name="Default test" duration-ms="45393" started-at="2018-02-25T07:44:29Z" finished-at="2018-02-25T07:45:14Z">
       <class name="com.webdriver.wait.WebdriverWaitFunctionRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.webdriver.wait.WebdriverWaitFunctionRunner@188715b5]" name="setUpClass" is-config="true" duration-ms="222" started-at="2018-02-24T13:36:29Z" finished-at="2018-02-24T13:36:29Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.webdriver.wait.WebdriverWaitFunctionRunner@188715b5]" name="setUpClass" is-config="true" duration-ms="215" started-at="2018-02-25T13:14:29Z" finished-at="2018-02-25T13:14:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.wait.WebdriverWaitFunctionRunner@188715b5]" name="feature" duration-ms="60326" started-at="2018-02-24T13:36:29Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-02-24T13:37:29Z">
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.wait.WebdriverWaitFunctionRunner@188715b5]" name="feature" duration-ms="45083" started-at="2018-02-25T13:14:29Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-02-25T13:15:14Z">
           <params>
             <param index="0">
               <value>
@@ -25,7 +25,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.webdriver.wait.WebdriverWaitFunctionRunner@188715b5]" name="tearDownClass" is-config="true" duration-ms="2" started-at="2018-02-24T13:37:29Z" finished-at="2018-02-24T13:37:29Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.webdriver.wait.WebdriverWaitFunctionRunner@188715b5]" name="tearDownClass" is-config="true" duration-ms="5" started-at="2018-02-25T13:15:14Z" finished-at="2018-02-25T13:15:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

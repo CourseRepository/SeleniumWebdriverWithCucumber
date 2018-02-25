@@ -16,3 +16,9 @@ Scenario: Web driver wait - Implicit wait
 	Then WebdriverWaitFunction_I click on login button
 	And WebdriverWaitFunction_I send the "value" to the username text box
 	When WebdriverWaitFunction_I call the quit method the browser will close 
+	
+Scenario: Web driver wait - Dynamic wait
+	When WebdriverWaitFunction_I provide the dynamic wait with polling duration as 250 ms and timeout duration as 60 sec
+	Then WebdriverWaitFunction_I click on login button
+	And WebdriverWaitFunction_I send the "value" to the username text box
+	When WebdriverWaitFunction_I call the quit method the browser will close 
