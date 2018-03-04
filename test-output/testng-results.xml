@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16377" started-at="2018-03-04T09:09:13Z" finished-at="2018-03-04T09:09:29Z">
+  <suite name="Default suite" duration-ms="33609" started-at="2018-03-04T12:29:43Z" finished-at="2018-03-04T12:30:16Z">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.iframes.IframesRunner@188715b5]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="16377" started-at="2018-03-04T09:09:13Z" finished-at="2018-03-04T09:09:29Z">
+    <test name="Default test" duration-ms="33609" started-at="2018-03-04T12:29:43Z" finished-at="2018-03-04T12:30:16Z">
       <class name="com.webdriver.iframes.IframesRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.webdriver.iframes.IframesRunner@188715b5]" name="setUpClass" is-config="true" duration-ms="244" started-at="2018-03-04T14:39:13Z" finished-at="2018-03-04T14:39:13Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.webdriver.iframes.IframesRunner@188715b5]" name="setUpClass" is-config="true" duration-ms="212" started-at="2018-03-04T17:59:43Z" finished-at="2018-03-04T17:59:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.iframes.IframesRunner@188715b5]" name="feature" duration-ms="16033" started-at="2018-03-04T14:39:13Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-03-04T14:39:29Z">
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.iframes.IframesRunner@188715b5]" name="feature" duration-ms="33306" started-at="2018-03-04T17:59:43Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-03-04T18:00:16Z">
           <params>
             <param index="0">
               <value>
@@ -22,10 +22,18 @@
               </value>
             </param>
           </params>
+          <exception class="cucumber.runtime.CucumberException">
+            <message>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'System info: host: 'L30077WIN', ip: '192.168.99.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_112'Driver info: driver.version: RemoteWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[cucumber.runtime.CucumberException: org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'System info: host: 'L30077WIN', ip: '192.168.99.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_112'Driver info: driver.version: RemoteWebDriverat cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.lang.reflect.Method.invoke(Method.java:498)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)Caused by: org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'System info: host: 'L30077WIN', ip: '192.168.99.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_112'Driver info: driver.version: RemoteWebDriverat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:131)at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:658)at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:487)at com.webdriver.iframes.IframesStepDfn.iframe_i_call_the_quit_method_the_browser_will_close(IframesStepDfn.java:106)at ✽.When IFrame_I call the quit method the browser will close(src/main/java/com/webdriver/iframes/Iframes.feature:10)]]>
+            </full-stacktrace>
+          </exception> <!-- cucumber.runtime.CucumberException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.webdriver.iframes.IframesRunner@188715b5]" name="tearDownClass" is-config="true" duration-ms="4" started-at="2018-03-04T14:39:29Z" finished-at="2018-03-04T14:39:29Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.webdriver.iframes.IframesRunner@188715b5]" name="tearDownClass" is-config="true" duration-ms="4" started-at="2018-03-04T18:00:16Z" finished-at="2018-03-04T18:00:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
