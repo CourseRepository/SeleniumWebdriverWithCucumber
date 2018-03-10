@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.webdriver.browser.CustomChromeDriver;
 import com.webdriver.helper.BrowserHelper;
 import com.webdriver.helper.ButtonHelper;
+import com.webdriver.helper.WindowHelper;
 
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
@@ -27,6 +28,7 @@ public class IframesStepDfn {
 	private BrowserHelper browserHelper;
 	private ButtonHelper buttonHelper;
 	private WebElement element;
+	private WindowHelper windowHelper;
 	private ArrayList<String> windowId;
 	
 	@Given("^IFrame_I navigate to the webpage \"([^\"]*)\"$")
@@ -35,6 +37,7 @@ public class IframesStepDfn {
 		driver = chromeDriver.getChromeDriver();
 		browserHelper = BrowserHelper.getInstance(driver);
 		buttonHelper = ButtonHelper.getInstance(driver);
+		windowHelper = WindowHelper.getInstance(driver);
 		driver.get(page);
 		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS); //Page load time out
 		browserHelper.maximize();
@@ -76,8 +79,9 @@ public class IframesStepDfn {
 		} catch (Exception e) {
 			// Ignore
 		}*/
-		windowId = new ArrayList<>(driver.getWindowHandles());
-		driver.switchTo().window(windowId.get(1));
+		/*windowId = new ArrayList<>(driver.getWindowHandles());
+		driver.switchTo().window(windowId.get(1));*/
+		windowHelper.switchToWindow(1);
 	}
 
 	@Then("^MultipleWindow_I switch to child browser window and click on home button$")
@@ -86,24 +90,27 @@ public class IframesStepDfn {
 	    wait.until(ExpectedConditions.presenceOfElementLocated(By.id("tryhome")));
 	    buttonHelper.click(By.id("tryhome"));
 	    wait.until(ExpectedConditions.numberOfWindowsToBe(3));
-	    windowId = new ArrayList<>(driver.getWindowHandles());
-		driver.switchTo().window(windowId.get(2));
+	    /*windowId = new ArrayList<>(driver.getWindowHandles());
+		driver.switchTo().window(windowId.get(2));*/
+	    windowHelper.switchToWindow(2);
 	}
 	
 	@Then("^MultipleWindow_I click on the element present in parent window$")
 	public void multiplewindow_i_click_on_the_element_present_in_parent_window() throws Throwable {
-		driver.switchTo().window(windowId.get(0));
+		/*driver.switchTo().window(windowId.get(0));*/
+		windowHelper.switchToParent();
 		buttonHelper.click(By.cssSelector("#main .w3-example:nth-child(13) [target]"));
-		driver.switchTo().window(windowId.get(2));
+		/*driver.switchTo().window(windowId.get(2));*/
+		windowHelper.switchToWindow(2);
 	}
 
 	
 	@When("^IFrame_I call the quit method the browser will close$")
 	public void iframe_i_call_the_quit_method_the_browser_will_close() throws Throwable {
 	    if(driver != null){
-	    	
+	    	windowHelper.switchToParentWithClose();
 	    	driver.quit(); // it will close all the window and stop the web driver
-	    	driver.close(); //it will close the window, currently pointed by driver instance
+	    	//driver.close(); //it will close the window, currently pointed by driver instance
 	    }
 	}
 	
