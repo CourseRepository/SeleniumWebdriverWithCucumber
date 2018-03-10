@@ -2,34 +2,34 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="17416" started-at="2018-03-10T07:36:15Z" finished-at="2018-03-10T07:36:33Z">
+  <suite name="Default suite" duration-ms="30202" started-at="2018-03-10T08:52:06Z" finished-at="2018-03-10T08:52:37Z">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.iframes.IframesRunner@146ba0ac]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.alerts.AlertsRunner@188715b5]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="17416" started-at="2018-03-10T07:36:15Z" finished-at="2018-03-10T07:36:33Z">
-      <class name="com.webdriver.iframes.IframesRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.webdriver.iframes.IframesRunner@146ba0ac]" name="setUpClass" is-config="true" duration-ms="224" started-at="2018-03-10T13:06:15Z" finished-at="2018-03-10T13:06:16Z">
+    <test name="Default test" duration-ms="30202" started-at="2018-03-10T08:52:06Z" finished-at="2018-03-10T08:52:37Z">
+      <class name="com.webdriver.alerts.AlertsRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.webdriver.alerts.AlertsRunner@188715b5]" name="setUpClass" is-config="true" duration-ms="238" started-at="2018-03-10T14:22:06Z" finished-at="2018-03-10T14:22:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.iframes.IframesRunner@146ba0ac]" name="feature" duration-ms="17111" started-at="2018-03-10T13:06:16Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-03-10T13:06:33Z">
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.alerts.AlertsRunner@188715b5]" name="feature" duration-ms="29861" started-at="2018-03-10T14:22:07Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-03-10T14:22:37Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Working with Iframe]]>
+                <![CDATA[Working with Java Script Popup]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.webdriver.iframes.IframesRunner@146ba0ac]" name="tearDownClass" is-config="true" duration-ms="2" started-at="2018-03-10T13:06:33Z" finished-at="2018-03-10T13:06:33Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.webdriver.alerts.AlertsRunner@188715b5]" name="tearDownClass" is-config="true" duration-ms="5" started-at="2018-03-10T14:22:37Z" finished-at="2018-03-10T14:22:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- com.webdriver.iframes.IframesRunner -->
+      </class> <!-- com.webdriver.alerts.AlertsRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
