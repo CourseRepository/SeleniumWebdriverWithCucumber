@@ -5,7 +5,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
 		features = {"src/main/java/com/webdriver/compositeactions/CompositeActions.feature"},
-		glue = {"com.webdriver.compositeactions"},
+		glue = {"com.webdriver.compositeactions","com.webdriver.generichook"},
 		dryRun = false,
 		monochrome = true
 		)

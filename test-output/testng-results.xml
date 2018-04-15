@@ -2,34 +2,34 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="41210" started-at="2018-04-15T07:10:52Z" finished-at="2018-04-15T07:11:33Z">
+  <suite name="Default suite" duration-ms="61429" started-at="2018-04-15T08:27:00Z" finished-at="2018-04-15T08:28:01Z">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.compositeactions.CompositeActions@146ba0ac]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.webelementfunction.WebelementFunctionRunner@188715b5]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="41210" started-at="2018-04-15T07:10:52Z" finished-at="2018-04-15T07:11:33Z">
-      <class name="com.webdriver.compositeactions.CompositeActions">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.webdriver.compositeactions.CompositeActions@146ba0ac]" name="setUpClass" is-config="true" duration-ms="183" started-at="2018-04-15T12:40:52Z" finished-at="2018-04-15T12:40:52Z">
+    <test name="Default test" duration-ms="61429" started-at="2018-04-15T08:27:00Z" finished-at="2018-04-15T08:28:01Z">
+      <class name="com.webdriver.webelementfunction.WebelementFunctionRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.webdriver.webelementfunction.WebelementFunctionRunner@188715b5]" name="setUpClass" is-config="true" duration-ms="263" started-at="2018-04-15T13:57:00Z" finished-at="2018-04-15T13:57:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.compositeactions.CompositeActions@146ba0ac]" name="feature" duration-ms="40945" started-at="2018-04-15T12:40:52Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-04-15T12:41:33Z">
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.webelementfunction.WebelementFunctionRunner@188715b5]" name="feature" duration-ms="61059" started-at="2018-04-15T13:57:00Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-04-15T13:58:01Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Working with Mouse and Keyboard actions]]>
+                <![CDATA[Web Element Functions]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.webdriver.compositeactions.CompositeActions@146ba0ac]" name="tearDownClass" is-config="true" duration-ms="3" started-at="2018-04-15T12:41:33Z" finished-at="2018-04-15T12:41:33Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.webdriver.webelementfunction.WebelementFunctionRunner@188715b5]" name="tearDownClass" is-config="true" duration-ms="5" started-at="2018-04-15T13:58:01Z" finished-at="2018-04-15T13:58:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- com.webdriver.compositeactions.CompositeActions -->
+      </class> <!-- com.webdriver.webelementfunction.WebelementFunctionRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

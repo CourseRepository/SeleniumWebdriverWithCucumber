@@ -5,7 +5,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
 		features = {"src/main/java/com/webdriver/webelementfunction/WebelementFunction.feature"},
-		glue = {"com.webdriver.webelementfunction"},
+		glue = {"com.webdriver.webelementfunction","com.webdriver.generichook"},
 		dryRun = false,
 		monochrome = true
 		)

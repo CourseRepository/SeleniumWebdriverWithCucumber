@@ -19,6 +19,7 @@ import com.webdriver.helper.AlertHelper;
 import com.webdriver.helper.BrowserHelper;
 import com.webdriver.helper.ButtonHelper;
 import com.webdriver.helper.WindowHelper;
+import com.webdriver.services.DriverServices;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -27,27 +28,51 @@ import cucumber.api.java.en.When;
 public class CompositeActionsDfn {
 	
 	private WebDriver driver;
-	private CustomChromeDriver chromeDriver;
+	private DriverServices services;
+	/*private CustomChromeDriver chromeDriver;
 	private BrowserHelper browserHelper;
 	private ButtonHelper buttonHelper;
 	private WebElement element;
 	private WindowHelper windowHelper;
 	private ArrayList<String> windowId;
-	private AlertHelper alertHelper;
+	private AlertHelper alertHelper; */
 	private Actions actions;
 	private Action action;
 	
+	/*
+	 * 1. Create class Driver service. This class will have the code for launching the browser as well as creating the instance of helper class. We will have
+	 * Methods that will return the different helper instance 
+	 * 2. This class i.e Driver Service will be inject in Hook as well as in the step dfn class
+	 * 3. In the Hook class we will use the injected object for closing the webdriver afte the scenario execution is over
+	 * 4. In the step dfn class we will use the injected object for performing the action on browser
+	 * */
+	
+	/*
+	 * 1. Object of Driver Service will get created
+	 * 2. Cont of General hook will get invoked
+	 * 3. Cont of step dfn class will get invoked
+	 * 4. normal execution
+	 * 5. After hook mehtod will be invoked
+	 * 
+	 * */
+	
+	public CompositeActionsDfn(DriverServices services) {
+		this.services = services;
+		this.driver = services.getDriver();
+	}
+	
 	@Given("^Actions_I navigate to the webpage \"([^\"]*)\"$")
 	public void actions_i_navigate_to_the_webpage(String page) throws Throwable {
-		chromeDriver = new CustomChromeDriver();
+		/*chromeDriver = new CustomChromeDriver();
 		driver = chromeDriver.getChromeDriver();
 		browserHelper = BrowserHelper.getInstance(driver);
 		buttonHelper = ButtonHelper.getInstance(driver);
 		windowHelper = WindowHelper.getInstance(driver);
 		alertHelper = AlertHelper.getInstance(driver);
-		driver.get(page);
+		
 		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS); //Page load time out
-		browserHelper.maximize();
+		browserHelper.maximize();*/
+		driver.get(page);
 	}
 
 	@When("^Actions_I create the composite action for context click$")
