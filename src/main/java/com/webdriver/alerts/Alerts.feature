@@ -28,3 +28,15 @@ Scenario: Working with prompt
 	And Alerts_I switch to popup and cancel it
 	Then Alerts_I switch to default content
 	When Alerts_I call the quit method the browser will close
+	
+Scenario: Working with Bootstrap popup
+	Given Alerts_I open to the webpage "https://www.w3schools.com/bootstrap/bootstrap_modal.asp"
+	# Step 1. Perform the event which will give rise to popup
+	# Step 2. Wait for popup to be visible
+	# Step 3. Interact with popup
+	# Step 4. Call the close button to close the popup
+	When Alerts_I click on open modal button
+	Then Alerts_It should open the bootstrap popup
+	And Alerts_I click on the close button to close the popup
+	When Alerts_I call the quit method the browser will close
+	

@@ -8,6 +8,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -119,6 +121,24 @@ public class AlertsStepDfn {
 		 if(driver != null){
 		    	driver.quit(); // it will close all the window and stop the web driver
 		    }
+	}
+	
+	@When("^Alerts_I click on open modal button$")
+	public void alerts_i_click_on_open_modal_button() throws Throwable {
+	   buttonHelper.click(By.xpath("//button[text()='Click To Open Modal']"));
+	}
+
+	@Then("^Alerts_It should open the bootstrap popup$")
+	public void alerts_it_should_open_the_bootstrap_popup() throws Throwable {
+	    WebDriverWait wait = getWait(driver, 60);
+	   element =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()='Close']")));
+	}
+
+	@Then("^Alerts_I click on the close button to close the popup$")
+	public void alerts_i_click_on_the_close_button_to_close_the_popup() throws Throwable {
+	    element.click();
+	    Actions act = new Actions(driver);
+	    act.click().build().perform();
 	}
 	
 	private WebDriverWait getWait(WebDriver driver,int timeOut){
