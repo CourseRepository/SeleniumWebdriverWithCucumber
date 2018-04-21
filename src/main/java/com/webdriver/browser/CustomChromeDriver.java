@@ -4,11 +4,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import com.webdriver.utils.ResourceUtils;
+
 public class CustomChromeDriver {
 	
 	private void setDriverExecutable(){
+		String chromePath = ResourceUtils.getResourcePath("chromedriver.exe");
+		/*System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\rathr1\\Downloads\\chromedriver_win32\\chromedriver.exe");*/
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\rathr1\\Downloads\\chromedriver_win32\\chromedriver.exe");
+				chromePath);
 	}
 	
 	private ChromeOptions getChromeOptions(){
