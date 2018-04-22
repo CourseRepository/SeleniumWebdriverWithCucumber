@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.BrowserType;
 
+import com.webdriver.browser.BrowserConfiguration;
 import com.webdriver.browser.CustomChromeDriver;
 import com.webdriver.browser.CustomFirefoxDriver;
 import com.webdriver.helper.AlertHelper;
@@ -19,7 +20,12 @@ import com.webdriver.utils.ReadConfigProperties;
 public class DriverServices {
 	
 	private WebDriver driver;
+	private BrowserConfiguration browserConfiguration;
 	
+	public BrowserConfiguration getBrowserConfiguration() {
+		return browserConfiguration;
+	}
+
 	public WebDriver getDriver() {
 		return driver;
 	}
@@ -86,12 +92,16 @@ public class DriverServices {
 		switch (reader.getBrowserType()) {
 		
 		case BrowserType.CHROME:
-			CustomChromeDriver chromeDriver = new CustomChromeDriver();
-			return chromeDriver.getChromeDriver();
+			/*CustomChromeDriver chromeDriver = new CustomChromeDriver();
+			return chromeDriver.getChromeDriver();*/
+			browserConfiguration = new CustomChromeDriver();
+			return browserConfiguration.getBrowserDriver();
 		
 		case BrowserType.FIREFOX:
-			CustomFirefoxDriver firefoxDriver = new CustomFirefoxDriver();
-			return firefoxDriver.getFirefoxDriver();
+			/*CustomFirefoxDriver firefoxDriver = new CustomFirefoxDriver();
+			return firefoxDriver.getFirefoxDriver();*/
+			browserConfiguration = new CustomFirefoxDriver();
+			return browserConfiguration.getBrowserDriver();
 			
 		default:
 			throw new RuntimeException("Invalid Browser Type : " + reader.getBrowserType());

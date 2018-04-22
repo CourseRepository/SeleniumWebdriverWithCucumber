@@ -8,7 +8,7 @@ import org.openqa.selenium.firefox.GeckoDriverService;
 
 import com.webdriver.utils.ResourceUtils;
 
-public class CustomFirefoxDriver {
+public class CustomFirefoxDriver implements BrowserConfiguration {
 	
 	private void setDriverExecutable(){
 		String firefoxPath = ResourceUtils.getResourcePath("geckodriver.exe");
@@ -36,6 +36,11 @@ public class CustomFirefoxDriver {
 		FirefoxOptions options = getFirefoxOptions(profile);
 		FirefoxDriver driver = new FirefoxDriver(options);
 		return driver;
+	}
+
+	@Override
+	public WebDriver getBrowserDriver() {
+		return getFirefoxDriver();
 	}
 
 }

@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import com.webdriver.utils.ResourceUtils;
 
-public class CustomChromeDriver {
+public class CustomChromeDriver implements BrowserConfiguration{
 	
 	private void setDriverExecutable(){
 		String chromePath = ResourceUtils.getResourcePath("chromedriver.exe");
@@ -32,6 +32,11 @@ public class CustomChromeDriver {
 		ChromeOptions options = getChromeOptions();
 		ChromeDriver driver = new ChromeDriver(options);
 		return driver;
+	}
+
+	@Override
+	public WebDriver getBrowserDriver() {
+		return getChromeDriver();
 	}
 
 

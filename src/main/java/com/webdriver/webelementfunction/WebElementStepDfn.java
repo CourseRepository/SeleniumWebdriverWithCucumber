@@ -52,8 +52,8 @@ public class WebElementStepDfn {
 		//buttonHelper = ButtonHelper.getInstance(driver);
 		//dropDownHelper = DropdownHelper.getInstance(driver);
 		//browserHelper.maximize();
-		//driver.get(url);
-		driver.get(readConfigFile.getApplicationUrl());
+		driver.get(url);
+		//driver.get(readConfigFile.getApplicationUrl());
 		
 	}
 
