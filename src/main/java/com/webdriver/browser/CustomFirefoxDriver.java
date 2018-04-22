@@ -6,10 +6,14 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.firefox.GeckoDriverService;
 
+import com.webdriver.utils.ResourceUtils;
+
 public class CustomFirefoxDriver {
 	
 	private void setDriverExecutable(){
-		System.setProperty(GeckoDriverService.GECKO_DRIVER_EXE_PROPERTY,"C:\\Users\\rathr1\\Downloads\\geckodriver-v0.19.1-win64\\geckodriver.exe");
+		String firefoxPath = ResourceUtils.getResourcePath("geckodriver.exe");
+		/*System.setProperty(GeckoDriverService.GECKO_DRIVER_EXE_PROPERTY,"C:\\Users\\rathr1\\Downloads\\geckodriver-v0.19.1-win64\\geckodriver.exe");*/
+		System.setProperty(GeckoDriverService.GECKO_DRIVER_EXE_PROPERTY,firefoxPath);
 	}
 	
 	private FirefoxOptions getFirefoxOptions(FirefoxProfile profile){

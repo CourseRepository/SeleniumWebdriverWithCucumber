@@ -6,7 +6,7 @@ import org.openqa.selenium.ie.InternetExplorerDriverService;
 import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.internal.ElementScrollBehavior;
 
-public class CustomInternetExplorerDriver {
+public class CustomInternetExplorerDriver  {
 	
 	private void setDriverExecutable(){
 		System.setProperty(InternetExplorerDriverService.IE_DRIVER_EXE_PROPERTY, "C:\\Users\\rathr1\\Downloads\\IEDriverServer_x64_3.8.0\\IEDriverServer.exe");
@@ -27,5 +27,7 @@ public class CustomInternetExplorerDriver {
 		InternetExplorerDriver driver = new InternetExplorerDriver(options);
 		return driver;
 	}
+
+	
 
 }

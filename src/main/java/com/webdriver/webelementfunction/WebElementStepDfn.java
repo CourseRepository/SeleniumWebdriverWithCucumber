@@ -12,6 +12,8 @@ import com.webdriver.helper.ButtonHelper;
 import com.webdriver.helper.DropdownHelper;
 import com.webdriver.helper.TextBoxHelper;
 import com.webdriver.services.DriverServices;
+import com.webdriver.utils.IReader;
+import com.webdriver.utils.ReadConfigProperties;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -21,6 +23,7 @@ public class WebElementStepDfn {
 
 	private WebDriver driver;
 	private DriverServices services;
+	private IReader readConfigFile;
 	//private BrowserHelper browserHelper;
 	private WebElement element;
 	private List<WebElement> elementList;
@@ -32,6 +35,7 @@ public class WebElementStepDfn {
 	public WebElementStepDfn(DriverServices services) {
 		this.services = services;
 		this.driver = services.getDriver();
+		this.readConfigFile = services.getReader();
 	}
 	
 
@@ -48,7 +52,9 @@ public class WebElementStepDfn {
 		//buttonHelper = ButtonHelper.getInstance(driver);
 		//dropDownHelper = DropdownHelper.getInstance(driver);
 		//browserHelper.maximize();
-		driver.get(url);
+		//driver.get(url);
+		driver.get(readConfigFile.getApplicationUrl());
+		
 	}
 
 	@When("^WebElementFunction_I provide the unique location to findelement api$")
