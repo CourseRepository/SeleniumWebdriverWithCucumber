@@ -7,7 +7,9 @@ Scenario: Working with context click
 	When Actions_I create the composite action for context click
 	Then Actions_I build the action
 	And Actions_I perfomr the action
+	And Actions_I take the screenshot
 	When Actions_I call the quit method the browser will close
+	
 	
 Scenario: Working with drang and drop action
  	When Actions_I create the composite action for drang and drop

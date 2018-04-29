@@ -1,5 +1,7 @@
 package com.webdriver.services;
 
+import java.io.Closeable;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -12,12 +14,13 @@ import com.webdriver.helper.AlertHelper;
 import com.webdriver.helper.BrowserHelper;
 import com.webdriver.helper.ButtonHelper;
 import com.webdriver.helper.DropdownHelper;
+import com.webdriver.helper.GenericHelper;
 import com.webdriver.helper.TextBoxHelper;
 import com.webdriver.helper.WindowHelper;
 import com.webdriver.utils.IReader;
 import com.webdriver.utils.ReadConfigProperties;
 
-public class DriverServices {
+public class DriverServices implements Closeable {
 	
 	private WebDriver driver;
 	private BrowserConfiguration browserConfiguration;
@@ -57,6 +60,11 @@ public class DriverServices {
 	private AlertHelper alertHelper;
 	private TextBoxHelper textBoxHelper; 
 	private DropdownHelper dropDownHelper;
+	private GenericHelper genericHelper;
+	public GenericHelper getGenericHelper() {
+		return genericHelper;
+	}
+
 	private IReader reader;
 	
 	
@@ -84,6 +92,7 @@ public class DriverServices {
 		alertHelper = AlertHelper.getInstance(driver);
 		textBoxHelper = TextBoxHelper.getInstance(driver);
 		dropDownHelper = DropdownHelper.getInstance(driver);
+		genericHelper = GenericHelper.getInstance(driver);
 		driver.manage().timeouts().pageLoadTimeout(reader.getExplicitWait(), TimeUnit.SECONDS); //Page load time out
 		browserHelper.maximize();
 	}
@@ -110,6 +119,11 @@ public class DriverServices {
 
 	public DriverServices() {
 		launchBrowser();
+	}
+
+	@Override
+	public void close() throws IOException {
+		
 	}
 
 }

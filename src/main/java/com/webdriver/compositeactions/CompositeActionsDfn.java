@@ -1,12 +1,16 @@
 package com.webdriver.compositeactions;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
@@ -117,8 +121,15 @@ public class CompositeActionsDfn {
 	    .sendKeys(element,"sele" ,Keys.SPACE, "nium") // Type the string 
 	    .keyUp(element,Keys.LEFT_SHIFT); // Simulate the releasing of shift key
 	}
-
-
+	
+	@Then("^Actions_I take the screenshot$")
+	public void actions_i_take_the_screenshot() throws Throwable {
+		
+		/*File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(screenshot, new File("src.png"));*/
+		services.getGenericHelper().takeScrenShot("ScreenDir", "abc.png");
+	}
+	
 
 	@When("^Actions_I call the quit method the browser will close$")
 	public void actions_i_call_the_quit_method_the_browser_will_close() throws Throwable {
