@@ -9,13 +9,14 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.webdriver.helper.DropdownHelper;
 
-public class DetailPageClass {
+public class DetailPageClass extends PageBase {
 
 	private WebDriver driver;
 
 	public DetailPageClass(WebDriver driver) {
+		super(driver);
 		this.driver = driver;
-		PageFactory.initElements(driver, this);
+		//PageFactory.initElements(driver, this);
 	}
 	
 	

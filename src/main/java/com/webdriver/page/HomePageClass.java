@@ -12,13 +12,14 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class HomePageClass {
+public class HomePageClass extends PageBase {
 	
 	private WebDriver driver;
 	
 	public HomePageClass(WebDriver driver){
+		super(driver);
 		this.driver = driver;
-		PageFactory.initElements(driver, this);
+		//PageFactory.initElements(driver, this);
 	}
 	
 	// WebElement
@@ -39,19 +40,12 @@ public class HomePageClass {
 	}
 	
 	// Navigation
-	public LoginPageClass navigateToLoginPage(){
+	public PageBase navigateToLoginPage(){
 		LoginPageClass loginPage = new LoginPageClass(driver);
 		fileABuglink.click();
 		WebDriverWait wait = getWait();
 		wait.until(ExpectedConditions.elementToBeClickable(loginPage.loginButotn));
 		return loginPage;
-	}
-	
-	private WebDriverWait getWait(){
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.pollingEvery(250, TimeUnit.MILLISECONDS);
-		wait.ignoring(NoSuchElementException.class);
-		return wait;
-	}
+	}	
 
 }

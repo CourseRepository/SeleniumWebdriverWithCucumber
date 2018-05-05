@@ -30,17 +30,17 @@ public class BugCreationStepDfn {
 
 	@Then("^Bugzilla_I click on File a bug link and navigate to login page$")
 	public void bugzilla_i_click_on_File_a_bug_link_and_navigate_to_login_page() throws Throwable {
-		loginPage = homepage.navigateToLoginPage();
+		loginPage = (LoginPageClass) homepage.navigateToLoginPage();
 	}
 
 	@Then("^Bugzilla_I log into the application and navigate to enter bug page$")
 	public void bugzilla_i_log_into_the_application_and_navigate_to_enter_bug_page() throws Throwable {
-		enterBug = loginPage.login(services.getReader().getUserName(), services.getReader().getPassword());
+		enterBug = (EnterBugClass) loginPage.login(services.getReader().getUserName(), services.getReader().getPassword());
 	}
 
 	@Then("^Bugzilla_I click on testng link and navigate to bug detail page$")
 	public void bugzilla_i_click_on_testng_link_and_navigate_to_bug_detail_page() throws Throwable {
-		detailPage = enterBug.clickTestngLink();
+		detailPage = (DetailPageClass) enterBug.clickTestngLink();
 	}
 
 	@Then("^Bugzilla_I provide the details as component as \"([^\"]*)\" version as \"([^\"]*)\" severity as \"([^\"]*)\" hardware as \"([^\"]*)\"$")

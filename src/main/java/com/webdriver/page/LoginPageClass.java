@@ -12,18 +12,21 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class LoginPageClass {
+public class LoginPageClass extends PageBase {
 	
 	private WebDriver driver;
 	
 	public LoginPageClass(WebDriver driver) {
+		super(driver);
 		this.driver = driver;
-		PageFactory.initElements(driver, this);
+		//PageFactory.initElements(driver, this);
 	}
 	
 /*	public By username = By.id("Bugzilla_login");
 	public By password = By.id("Bugzilla_password");
 	public By loginButotn = By.id("log_in");*/
+	
+	
 
 	@FindBy(how = How.ID,using = "Bugzilla_login")
 	public WebElement username;
@@ -36,7 +39,7 @@ public class LoginPageClass {
 	//Serach 
 	
 	//Navigation
-	public EnterBugClass login(String user,String pass){
+	public PageBase login(String user,String pass){
 		EnterBugClass enterBug = new EnterBugClass(driver);
 		username.sendKeys(user);
 		password.sendKeys(pass);
@@ -44,13 +47,6 @@ public class LoginPageClass {
 		WebDriverWait wait = getWait();
 		wait.until(ExpectedConditions.elementToBeClickable(enterBug.testnglink));
 		return enterBug;
-	}
-	
-	private WebDriverWait getWait(){
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.pollingEvery(250, TimeUnit.MILLISECONDS);
-		wait.ignoring(NoSuchElementException.class);
-		return wait;
 	}
 
 }
