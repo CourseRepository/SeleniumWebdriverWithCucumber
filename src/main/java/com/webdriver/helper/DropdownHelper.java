@@ -50,6 +50,11 @@ public class DropdownHelper {
 		select.selectByValue(valueAttribute);
 	}
 	
+	public void selectByValue(WebElement element,String valueAttribute){
+		Select select = new Select(element);
+		select.selectByValue(valueAttribute);
+	}
+	
 	/**
 	 * @param locator
 	 * @return List<WebElement> : Each element in list repre a value in drop down

@@ -2,34 +2,34 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="109767" started-at="2018-04-29T06:20:14Z" finished-at="2018-04-29T06:22:04Z">
+  <suite name="Default suite" duration-ms="17077" started-at="2018-05-05T11:41:15Z" finished-at="2018-05-05T11:41:32Z">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.compositeactions.CompositeActions@6a192cfe]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.page.BugCreationRunner@6eebc39e]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="109767" started-at="2018-04-29T06:20:14Z" finished-at="2018-04-29T06:22:04Z">
-      <class name="com.webdriver.compositeactions.CompositeActions">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.webdriver.compositeactions.CompositeActions@6a192cfe]" name="setUpClass" is-config="true" duration-ms="275" started-at="2018-04-29T11:50:14Z" finished-at="2018-04-29T11:50:14Z">
+    <test name="Default test" duration-ms="17077" started-at="2018-05-05T11:41:15Z" finished-at="2018-05-05T11:41:32Z">
+      <class name="com.webdriver.page.BugCreationRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.webdriver.page.BugCreationRunner@6eebc39e]" name="setUpClass" is-config="true" duration-ms="206" started-at="2018-05-05T17:11:15Z" finished-at="2018-05-05T17:11:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.compositeactions.CompositeActions@6a192cfe]" name="feature" duration-ms="109393" started-at="2018-04-29T11:50:14Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-04-29T11:52:04Z">
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.page.BugCreationRunner@6eebc39e]" name="feature" duration-ms="16794" started-at="2018-05-05T17:11:15Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-05-05T17:11:32Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Working with Mouse and Keyboard actions]]>
+                <![CDATA[Create bug in bugzila application]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.webdriver.compositeactions.CompositeActions@6a192cfe]" name="tearDownClass" is-config="true" duration-ms="2" started-at="2018-04-29T11:52:04Z" finished-at="2018-04-29T11:52:04Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.webdriver.page.BugCreationRunner@6eebc39e]" name="tearDownClass" is-config="true" duration-ms="2" started-at="2018-05-05T17:11:32Z" finished-at="2018-05-05T17:11:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- com.webdriver.compositeactions.CompositeActions -->
+      </class> <!-- com.webdriver.page.BugCreationRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
