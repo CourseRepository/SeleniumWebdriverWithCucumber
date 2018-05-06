@@ -44,14 +44,15 @@ public class BugCreationStepDfn {
 	@Then("^Bugzilla_The title of login page should be \"([^\"]*)\"$")
 	public void bugzilla_the_title_of_login_page_should_be(String expected) throws Throwable {
 		//Assert.assertEquals(driver.getTitle(), expected + "asd");
-		int i = 0;
+	/*	int i = 0;
 		
 		try {
 			if(i == 0)
 				fail("Failed By User");
 		} catch (AssertionError e) {
 			System.out.println("Condition was failed But test continued");
-		}
+		}*/
+		fail("To Take the Screen Shot");
 		
 	}
 	

@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import com.webdriver.services.DriverServices;
 
+import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
@@ -23,7 +24,12 @@ public class GeneralHook {
 	}
 	
 	@After
-	public void teardown() {
+	public void teardown(Scenario scenario) {
+		if(scenario.isFailed()){
+			int random = (int)(Math.random() * 1000);
+			services.getGenericHelper().takeScrenShot("Screenshot", "src" + random +".png");
+		}
+		
 		if(driver != null){
 	    	driver.quit(); // it will close all the window and stop the web driver
 	    }
