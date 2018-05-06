@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.webdriver.helper.DropdownHelper;
 
@@ -72,8 +74,12 @@ public class DetailPageClass extends PageBase {
 		description.sendKeys(comment);
 	}
 	
-	public void clickSubmitBugButton(){
+	public PageBase clickSubmitBugButton(){
+		BugSummaryPage summaryPage = new BugSummaryPage(driver);
 		submitbug.click();
+		WebDriverWait wait = getWait();
+		wait.until(ExpectedConditions.elementToBeClickable(summaryPage.saveChanges));
+		return summaryPage;
 	}
 
 }
