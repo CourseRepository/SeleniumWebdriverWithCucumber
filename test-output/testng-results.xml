@@ -2,19 +2,19 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="50927" started-at="2018-05-06T12:01:57Z" finished-at="2018-05-06T12:02:48Z">
+  <suite name="Default suite" duration-ms="61617" started-at="2018-05-12T08:41:50Z" finished-at="2018-05-12T08:42:52Z">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.page.BugCreationRunner@6a192cfe]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="50927" started-at="2018-05-06T12:01:57Z" finished-at="2018-05-06T12:02:48Z">
+    <test name="Default test" duration-ms="61617" started-at="2018-05-12T08:41:50Z" finished-at="2018-05-12T08:42:52Z">
       <class name="com.webdriver.page.BugCreationRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.webdriver.page.BugCreationRunner@6a192cfe]" name="setUpClass" is-config="true" duration-ms="282" started-at="2018-05-06T17:31:57Z" finished-at="2018-05-06T17:31:57Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.webdriver.page.BugCreationRunner@6a192cfe]" name="setUpClass" is-config="true" duration-ms="339" started-at="2018-05-12T14:11:50Z" finished-at="2018-05-12T14:11:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="FAIL" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.page.BugCreationRunner@6a192cfe]" name="feature" duration-ms="50546" started-at="2018-05-06T17:31:57Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-05-06T17:32:48Z">
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.page.BugCreationRunner@6a192cfe]" name="feature" duration-ms="61172" started-at="2018-05-12T14:11:51Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-05-12T14:12:52Z">
           <params>
             <param index="0">
               <value>
@@ -33,7 +33,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.webdriver.page.BugCreationRunner@6a192cfe]" name="tearDownClass" is-config="true" duration-ms="4" started-at="2018-05-06T17:32:48Z" finished-at="2018-05-06T17:32:48Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.webdriver.page.BugCreationRunner@6a192cfe]" name="tearDownClass" is-config="true" duration-ms="4" started-at="2018-05-12T14:12:52Z" finished-at="2018-05-12T14:12:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

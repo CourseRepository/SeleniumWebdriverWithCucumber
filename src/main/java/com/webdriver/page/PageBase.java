@@ -11,12 +11,19 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.webdriver.page.factory.CustomFactory;
+import com.webdriver.page.factory.PageName;
+
 public class PageBase {
 	
 	private WebDriver driver;
 	
 	@FindBy(how = How.XPATH,using = "//div[@id='header']/ul[1]/li[11]/a")
 	public WebElement logout;
+	@FindBy(how = How.XPATH,using = "//a[text()='Home']")
+	public WebElement home;
+	@FindBy(how = How.XPATH,using = "//a[text()='New']")
+	public WebElement newLink;
 	
 	public PageBase(WebDriver driver) {
 		this.driver = driver;
@@ -37,6 +44,13 @@ public class PageBase {
 		WebDriverWait wait = getWait();
 		wait.until(ExpectedConditions.elementToBeClickable(homePage.fileABuglink));
 		return homePage;
+	}
+	
+	protected PageBase navigateTo(PageName name,WebDriver driver,WebElement element){
+		WebDriverWait wait = getWait();
+		wait.until(ExpectedConditions.visibilityOf(element));
+		return CustomFactory.getInstance(name, driver);
+		
 	}
 
 }

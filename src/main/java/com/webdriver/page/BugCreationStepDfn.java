@@ -3,7 +3,7 @@ package com.webdriver.page;
 import org.openqa.selenium.WebDriver;
 import static org.testng.Assert.*;
 
-
+import com.webdriver.page.factory.PageName;
 import com.webdriver.services.DriverServices;
 import com.webdriver.utils.TestSettings;
 
@@ -85,5 +85,18 @@ public class BugCreationStepDfn {
 	@Then("^Bugzilla_I am at the summary page and I click the logout button$")
 	public void bugzilla_i_am_at_the_summary_page_and_I_click_the_logout_button() throws Throwable {
 		testSettings.summarypage.logoutFromApplication();
+	}
+	
+	@Then("^Bugzilla_I navigate to Home page$")
+	public void bugzilla_i_navigate_to_Home_page() throws Throwable {
+		testSettings.enterBug.home.click();
+		testSettings.homepage = (HomePageClass) testSettings.enterBug.navigateTo(PageName.HomePage, driver, testSettings.enterBug.home);
+	   
+	}
+
+	@Then("^Bugzilla_I navigate to enter bug page$")
+	public void bugzilla_i_navigate_to_enter_bug_page() throws Throwable {
+	    testSettings.homepage.newLink.click();
+	    testSettings.enterBug = (EnterBugClass) testSettings.homepage.navigateTo(PageName.EnterBugPage, driver, testSettings.homepage.newLink);
 	}
 }
