@@ -38,7 +38,7 @@ public class PageBase {
 	}
 	
 	
-	protected PageBase logoutFromApplication(){
+	public PageBase logoutFromApplication(){
 		logout.click();
 		HomePageClass homePage = new HomePageClass(driver);
 		WebDriverWait wait = getWait();
