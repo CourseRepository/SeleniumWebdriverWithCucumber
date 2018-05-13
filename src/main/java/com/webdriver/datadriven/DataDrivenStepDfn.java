@@ -79,6 +79,21 @@ public class DataDrivenStepDfn {
 		testSettings.detailPage.provideOtherDetails(dataMap.get("Operating"), dataMap.get("Summary"), dataMap.get("Description"));
 	}
 	
+	@Then("^DataDriven_I provide the details as component as \"([^\"]*)\" version as \"([^\"]*)\" severity as \"([^\"]*)\" hardware as \"([^\"]*)\"$")
+	public void datadriven_i_provide_the_details_as_component_as_version_as_severity_as_hardware_as(String component, String version, String severity, String hardware) throws Throwable {
+		testSettings.detailPage.provideDetails(component,version, severity, hardware);
+	}
+
+	@Then("^DataDriven_I provide other details operating system as \"([^\"]*)\" summary as \"([^\"]*)\" and description as \"([^\"]*)\"$")
+	public void datadriven_i_provide_other_details_operating_system_as_summary_as_and_description_as(String operating, String summary, String description) throws Throwable {
+		testSettings.detailPage.provideOtherDetails(operating, summary, description);
+	}
+
+	@Then("^DataDriven_I title should contain \"([^\"]*)\"$")
+	public void datadriven_i_title_should_contain(String subString) throws Throwable {
+		Assert.assertTrue(driver.getTitle().contains(subString), "Title Mis Match");
+	}
+	
 
 	@Then("^DataDriven_I click on submit bug button$")
 	public void datadriven_i_click_on_submit_bug_button() throws Throwable {
