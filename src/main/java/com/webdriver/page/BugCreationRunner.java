@@ -7,7 +7,8 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		features = {"src/main/java/com/webdriver/page/BugCreation.feature"},
 		glue = {"com.webdriver.page","com.webdriver.generichook"},
 		dryRun = false,
-		monochrome = true
+		monochrome = true,
+		plugin = {"pretty","junit:target/junitReport/junitreport.xml"}
 		)
 public class BugCreationRunner extends AbstractTestNGCucumberTests {
 

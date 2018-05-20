@@ -26,14 +26,18 @@ public class GeneralHook {
 	@After
 	public void teardown(Scenario scenario) {
 		if(scenario.isFailed()){
-			int random = (int)(Math.random() * 1000);
-			services.getGenericHelper().takeScrenShot("Screenshot", "src" + random +".png");
+			captureScreenShot(scenario);
 		}
-		
 		if(driver != null){
 	    	driver.quit(); // it will close all the window and stop the web driver
 	    }
 		
+	}
+
+	private void captureScreenShot(Scenario scenario) {
+		int random = (int)(Math.random() * 1000);
+		services.getGenericHelper().takeScrenShot("Screenshot", "src" + random +".png");
+		scenario.embed(services.getGenericHelper().takeScrenShot(), "image/png");
 	}
 
 }

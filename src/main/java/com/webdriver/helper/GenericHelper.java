@@ -43,5 +43,10 @@ public class GenericHelper {
 			e.printStackTrace();
 		}
 	}
+	
+	public byte[] takeScrenShot(){
+		byte[] screenshot = ((TakesScreenshot)wdDriver).getScreenshotAs(OutputType.BYTES);
+		return screenshot;
+	}
 
 }

@@ -7,7 +7,8 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		features = {"src/main/java/com/webdriver/wait/WebdriverWaitFunction.feature"},
 		glue = {"com.webdriver.wait"},
 		dryRun = false,
-		monochrome = true
+		monochrome = true,
+		plugin = {"pretty"}
 		)
 public class WebdriverWaitFunctionRunner extends AbstractTestNGCucumberTests {
 
