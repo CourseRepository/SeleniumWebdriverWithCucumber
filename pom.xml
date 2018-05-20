@@ -30,8 +30,17 @@
 					</execution>
 				</executions>
 				<configuration>
+					<forkCount>3</forkCount> <!-- how many parallel vm get created and execute -->
+					<reuseForks>false</reuseForks><!-- Every it will create a new vm for 
+						the execution and will not use any existing -->
+					<testFailureIgnore>true</testFailureIgnore><!-- The execution will continue 
+						even if there is a test failure -->
+					<includes> <!-- Specify the file name -->
+						<include>**/*Runner.java</include><!-- This will include all the file 
+							which has "Runner" as suffix in their name -->
+					</includes>
 					<suiteXmlFiles>
-						<suiteXmlFile>${testngxml.location}/testng.xml</suiteXmlFile>
+						<!-- <suiteXmlFile>${testngxml.location}/testng.xml</suiteXmlFile> -->
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
