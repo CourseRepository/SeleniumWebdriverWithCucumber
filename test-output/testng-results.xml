@@ -1,46 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="146018" started-at="2018-05-26T06:56:41Z" finished-at="2018-05-26T06:59:07Z">
+  <suite name="Default suite" duration-ms="82648" started-at="2018-05-26T09:44:44Z" finished-at="2018-05-26T09:46:07Z">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.runner.GenericRunner@148080bb]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="CustomAbstractTestNGCucumberTestsWithTag.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.runner.CustomGenericRunnerWithTag@5ffead27]" name="feature" class="com.webdriver.customrunner.CustomAbstractTestNGCucumberTestsWithTag"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="146018" started-at="2018-05-26T06:56:41Z" finished-at="2018-05-26T06:59:07Z">
-      <class name="com.webdriver.runner.GenericRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.webdriver.runner.GenericRunner@148080bb]" name="setUpClass" is-config="true" duration-ms="330" started-at="2018-05-26T12:26:41Z" finished-at="2018-05-26T12:26:41Z">
+    <test name="Default test" duration-ms="82648" started-at="2018-05-26T09:44:44Z" finished-at="2018-05-26T09:46:07Z">
+      <class name="com.webdriver.runner.CustomGenericRunnerWithTag">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.webdriver.runner.CustomGenericRunnerWithTag@5ffead27]" name="setUpClass" is-config="true" duration-ms="467" started-at="2018-05-26T15:14:44Z" finished-at="2018-05-26T15:14:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.runner.GenericRunner@148080bb]" name="feature" duration-ms="91906" started-at="2018-05-26T12:26:42Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-05-26T12:28:13Z">
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.runner.CustomGenericRunnerWithTag@5ffead27]" name="feature" duration-ms="31932" started-at="2018-05-26T15:15:35Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-05-26T15:16:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Web driver wait fuction]]>
+                <![CDATA[Browser Function]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.runner.GenericRunner@148080bb]" name="feature" duration-ms="53629" started-at="2018-05-26T12:28:13Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-05-26T12:29:07Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Web Element Functions]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.webdriver.runner.GenericRunner@148080bb]" name="tearDownClass" is-config="true" duration-ms="24" started-at="2018-05-26T12:29:07Z" finished-at="2018-05-26T12:29:07Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.webdriver.runner.CustomGenericRunnerWithTag@5ffead27]" name="tearDownClass" is-config="true" duration-ms="27" started-at="2018-05-26T15:16:07Z" finished-at="2018-05-26T15:16:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- com.webdriver.runner.GenericRunner -->
+      </class> <!-- com.webdriver.runner.CustomGenericRunnerWithTag -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

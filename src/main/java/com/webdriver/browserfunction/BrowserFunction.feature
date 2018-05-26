@@ -1,3 +1,4 @@
+@runtime
 Feature: Browser Function
 
   Background: 
