@@ -36,7 +36,7 @@
 					<testFailureIgnore>true</testFailureIgnore><!-- The execution will continue 
 						even if there is a test failure -->
 					<includes> <!-- Specify the file name -->
-						<include>**/*Runner.java</include><!-- This will include all the file 
+						<include>**/GenericRunner.java</include><!-- This will include all the file 
 							which has "Runner" as suffix in their name -->
 					</includes>
 					<suiteXmlFiles>
