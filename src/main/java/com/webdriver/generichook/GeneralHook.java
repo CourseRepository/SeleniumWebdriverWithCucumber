@@ -18,9 +18,19 @@ public class GeneralHook {
 		this.driver = services.getDriver();
 	}
 	
-	@Before
+	@Before(value="@regression",order = 2)
+	public void setupForRegression(){
+		System.out.println("This is regression suite");
+	}
+	
+	@Before(value="@smoke")
+	public void setupForSmoke(){
+		System.out.println("This is smoke suite");
+	}
+	
+	@Before(order = 1)
 	public void setup() {
-		
+		System.out.println(" This is normal hook");
 	}
 	
 	@After

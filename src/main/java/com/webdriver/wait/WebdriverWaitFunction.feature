@@ -1,3 +1,4 @@
+@regression
 Feature: Web driver wait fuction
 
 Background: Common step for all the scenario

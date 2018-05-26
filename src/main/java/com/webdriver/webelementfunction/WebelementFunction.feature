@@ -13,13 +13,15 @@ Scenario: Webelement Function for multiple elements
 	When WebElementFunction_I provide non unique locator 
 	Then WebElemetFunction_It should return the list of web element 
 	When WebElementFunction_I call the quit method the browser will close 
-	
+
+@regression	
 Scenario: Working with text box 
 	When WebElementFunction_I call the send keys api with value "abc.com" it should type in the textbox 
 	When WebElementFunction_I call the get text api it should return the text 
 	When WebElementFunction_I call the clear api it should clear the text box 
 	When WebElementFunction_I call the quit method the browser will close 
 
+@regression
 Scenario: Working with Button,CheckBox Hyperlink and Radio Button
 	When  WebElementFunction_I the click method on button it should perform the click action on button
 	When WebElementFunction_I call the click method on radio button it should select the radio button
