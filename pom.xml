@@ -32,6 +32,7 @@
 				<configuration>
 					<systemPropertyVariables>
 						<FeatureName>${feature.name}</FeatureName>
+						<TagName>${tag.name}</TagName>
 					</systemPropertyVariables>
 					<forkCount>3</forkCount> <!-- how many parallel vm get created and execute -->
 					<reuseForks>false</reuseForks><!-- Every it will create a new vm for 
