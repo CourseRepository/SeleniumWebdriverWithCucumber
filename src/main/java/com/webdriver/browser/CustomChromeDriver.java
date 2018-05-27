@@ -9,7 +9,11 @@ import com.webdriver.utils.ResourceUtils;
 public class CustomChromeDriver implements BrowserConfiguration{
 	
 	private void setDriverExecutable(){
-		String chromePath = ResourceUtils.getResourcePath("chromedriver.exe");
+		String chromePath = "";
+		if(!System.getProperty("os.name").contains("Windows"))
+			chromePath = ResourceUtils.getResourcePath("chromedriver.exe");
+		else
+			chromePath = ResourceUtils.getResourcePath("chromedriver");
 		/*System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\rathr1\\Downloads\\chromedriver_win32\\chromedriver.exe");*/
 		System.setProperty("webdriver.chrome.driver",
