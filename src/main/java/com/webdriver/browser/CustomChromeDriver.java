@@ -10,7 +10,7 @@ public class CustomChromeDriver implements BrowserConfiguration{
 	
 	private void setDriverExecutable(){
 		String chromePath = "";
-		if(!System.getProperty("os.name").contains("Windows"))
+		if(System.getProperty("os.name").contains("Windows"))
 			chromePath = ResourceUtils.getResourcePath("chromedriver.exe");
 		else
 			chromePath = ResourceUtils.getResourcePath("chromedriver");
