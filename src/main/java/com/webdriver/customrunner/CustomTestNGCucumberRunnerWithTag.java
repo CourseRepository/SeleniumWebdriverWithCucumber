@@ -43,7 +43,7 @@ public class CustomTestNGCucumberRunnerWithTag {
 	        RuntimeOptionsFactory runtimeOptionsFactory = new RuntimeOptionsFactory(clazz);
 	        runtimeOptions = runtimeOptionsFactory.create();
 	        
-	        //addTagtoTheRunner(runtimeOptions);
+	        addTagtoTheRunner(runtimeOptions);
 	        
 	        TestNgReporter reporter = new TestNgReporter(System.out);
 	        ClassFinder classFinder = new ResourceLoaderClassFinder(resourceLoader, classLoader);
