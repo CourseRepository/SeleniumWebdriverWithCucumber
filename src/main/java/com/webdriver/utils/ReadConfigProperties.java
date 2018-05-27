@@ -75,5 +75,15 @@ public class ReadConfigProperties implements IReader {
 		return properties.getProperty("BrowserName");
 	}
 
+	@Override
+	public void setBrowserType() {
+		String browserName = System.getProperty("BrowserType");
+		if(null == browserName || browserName.isEmpty())
+			browserName = "chrome";
+		System.out.println(" ================== > " + browserName);
+		properties.setProperty("BrowserName", browserName);
+		
+	}
+
 
 }

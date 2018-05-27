@@ -84,6 +84,7 @@ public class DriverServices implements Closeable {
 	public void launchBrowser(){
 		//chromeDriver = new CustomChromeDriver();
 		reader = new ReadConfigProperties();
+		reader.setBrowserType();
 		//driver = chromeDriver.getChromeDriver();
 		driver = getBrowserDriver();
 		browserHelper = BrowserHelper.getInstance(driver);
@@ -98,6 +99,10 @@ public class DriverServices implements Closeable {
 	}
 	
 	private WebDriver getBrowserDriver() {
+		/*String browser = System.getProperty("browser.name");
+		System.out.println(" ============== > " + browser);
+		if(browser.isEmpty())
+			browser = "chrome";*/
 		switch (reader.getBrowserType()) {
 		
 		case BrowserType.CHROME:

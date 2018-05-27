@@ -15,5 +15,6 @@ public interface IReader {
 	public String getPassword();
 	public int getExplicitWait();
 	public String getBrowserType();
+	public void setBrowserType();
 
 }
