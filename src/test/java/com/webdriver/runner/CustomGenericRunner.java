@@ -10,7 +10,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		glue = {"com.webdriver"},
 		dryRun = false,
 		monochrome = true,
-		plugin = {"pretty","html:target/HTMLReport"}
+				plugin = {"pretty","json:target/customgenericrunner.json"}
 		)
 public class CustomGenericRunner extends CustomAbstractTestNGCucumberTests {
 

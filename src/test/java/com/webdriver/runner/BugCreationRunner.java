@@ -8,7 +8,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		glue = {"com.webdriver.page","com.webdriver.generichook"},
 		dryRun = false,
 		monochrome = true,
-		plugin = {"pretty","junit:target/junitReport/junitreport.xml"}
+				plugin = {"pretty","json:target/bugcreationrunner.json"}
 		)
 public class BugCreationRunner extends AbstractTestNGCucumberTests {
 

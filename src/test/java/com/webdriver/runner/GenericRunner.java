@@ -8,7 +8,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		glue = {"com.webdriver"},
 		dryRun = false,
 		monochrome = true,
-		plugin = {"pretty","json:target/report.json"}
+		plugin = {"pretty","json:target/genericrunner.json"}
 		//tags = {"@regression"}
 		)
 public class GenericRunner extends AbstractTestNGCucumberTests {

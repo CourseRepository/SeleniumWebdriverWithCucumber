@@ -7,7 +7,8 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		features = {"src/main/java/com/webdriver/datadriven/DataDriven.feature"},
 		glue = {"com.webdriver.datadriven","com.webdriver.generichook"},
 		dryRun = false,
-		monochrome = true
+		monochrome = true,
+				plugin = {"pretty","json:target/datadrivenrunner.json"}
 		)
 public class DataDrivenRunner extends AbstractTestNGCucumberTests {
 

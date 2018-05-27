@@ -9,7 +9,7 @@ import cucumber.api.CucumberOptions;
 		glue = {"com.webdriver"},
 		dryRun = false,
 		monochrome = true,
-		plugin = {"pretty","html:target/HTMLReport"}
+				plugin = {"pretty","json:target/customgenericrunnerwithtag.json"}
 		)
 public class CustomGenericRunnerWithTag extends CustomAbstractTestNGCucumberTestsWithTag {
 
