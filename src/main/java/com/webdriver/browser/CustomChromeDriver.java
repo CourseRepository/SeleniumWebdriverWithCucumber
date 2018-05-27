@@ -13,7 +13,7 @@ public class CustomChromeDriver implements BrowserConfiguration{
 		if(System.getProperty("os.name").contains("Windows"))
 			chromePath = ResourceUtils.getResourcePath("chromedriver.exe");
 		else
-			chromePath = ResourceUtils.getResourcePath("chromedriver");
+			chromePath = "/home/vagrant/jenkins_home/chromedriver";
 		/*System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\rathr1\\Downloads\\chromedriver_win32\\chromedriver.exe");*/
 		System.setProperty("webdriver.chrome.driver",
