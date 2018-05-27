@@ -106,7 +106,7 @@ public class CustomTestNGCucumberRunnerWithTag {
 	     * */
 	    
 	    public List<CucumberFeature> getFeatures() {
-	    	List<CucumberFeature> modifiedList = getModifiedFeatureList();
+	    	//List<CucumberFeature> modifiedList = getModifiedFeatureList();
 	    	/*for (CucumberFeature cucumberFeature : featureList) {
 				if(value.equalsIgnoreCase(cucumberFeature.getGherkinFeature().getName())){
 					System.out.println( " Got the Object" );
@@ -114,7 +114,7 @@ public class CustomTestNGCucumberRunnerWithTag {
 				}
 			}*/
 	    	
-	        return modifiedList;
+	        return runtimeOptions.cucumberFeatures(resourceLoader);
 	    }
 
 		private List<CucumberFeature> getModifiedFeatureList() {
