@@ -11,7 +11,14 @@ import com.webdriver.utils.ResourceUtils;
 public class CustomFirefoxDriver implements BrowserConfiguration {
 	
 	private void setDriverExecutable(){
-		String firefoxPath = ResourceUtils.getResourcePath("geckodriver.exe");
+		String firefoxPath = "";
+		
+		if(System.getProperty("os.name").contains("Windows")){
+			firefoxPath = ResourceUtils.getResourcePath("geckodriver.exe");
+		}else{
+			// Code for other machine
+		}
+		 
 		/*System.setProperty(GeckoDriverService.GECKO_DRIVER_EXE_PROPERTY,"C:\\Users\\rathr1\\Downloads\\geckodriver-v0.19.1-win64\\geckodriver.exe");*/
 		System.setProperty(GeckoDriverService.GECKO_DRIVER_EXE_PROPERTY,firefoxPath);
 	}
