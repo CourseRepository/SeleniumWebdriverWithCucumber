@@ -31,6 +31,8 @@
 				</executions>
 				<configuration>
 					<systemPropertyVariables>
+						<IsGridSetup>true</IsGridSetup>
+						<HubUrl> http://192.168.1.6:4444/hub</HubUrl>
 						<FeatureName>${feature.name}</FeatureName>
 						<TagName>${tag.name}</TagName>
 						<BrowserType>${browser.type}</BrowserType>
