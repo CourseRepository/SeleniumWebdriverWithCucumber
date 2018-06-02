@@ -59,7 +59,6 @@ public class CustomFirefoxDriver implements BrowserConfiguration {
 		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 		capabilities.setAcceptInsecureCerts(true);
 		capabilities.setJavascriptEnabled(true);
-		capabilities.setCapability(GeckoDriverService.GECKO_DRIVER_EXE_PROPERTY, "C:\\Selenium\\geckodriver.exe");
 		WebDriver driver = null;
 		try {
 			driver = new RemoteWebDriver(getHubUrl(), capabilities);
