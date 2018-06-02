@@ -31,7 +31,7 @@
 				</executions>
 				<configuration>
 					<systemPropertyVariables>
-						<IsGridSetup>${grid.setup}</IsGridSetup>
+						<IsGridSetup>${is.grid}</IsGridSetup>
 						<HubUrl>${hub.url}</HubUrl>
 						<FeatureName>${feature.name}</FeatureName>
 						<TagName>${tag.name}</TagName>
