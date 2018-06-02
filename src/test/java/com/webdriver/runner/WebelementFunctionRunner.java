@@ -7,7 +7,8 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		features = {"src/main/java/com/webdriver/webelementfunction/WebelementFunction.feature"},
 		glue = {"com.webdriver.webelementfunction","com.webdriver.generichook"},
 		dryRun = false,
-		monochrome = true
+		monochrome = true,
+		plugin = {"pretty","json:target/webdriverwaitfunctionrunner.json"}
 		)
 public class WebelementFunctionRunner extends AbstractTestNGCucumberTests {
 
