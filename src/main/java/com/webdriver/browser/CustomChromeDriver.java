@@ -74,10 +74,7 @@ public class CustomChromeDriver implements BrowserConfiguration{
 	public boolean isGridSetup() {
 		String property = System.getProperty("IsGridSetup");
 		
-		if(null == property || property.isEmpty())
-			throw new RuntimeException("Invalid Property Value");
-		
-		if("false".equalsIgnoreCase(property))
+		if(null == property || property.isEmpty() || "false".equalsIgnoreCase(property))
 			return false;
 		return true;
 	}

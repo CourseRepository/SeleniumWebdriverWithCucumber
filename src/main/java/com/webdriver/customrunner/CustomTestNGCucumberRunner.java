@@ -107,7 +107,12 @@ public class CustomTestNGCucumberRunner {
 	    }
 
 		private List<CucumberFeature> getModifiedFeatureList() {
-			String value[] = System.getProperty("FeatureName").split(",");
+			String sysProperty = System.getProperty("FeatureName");
+			
+			if(null == sysProperty || sysProperty.isEmpty())
+				return runtimeOptions.cucumberFeatures(resourceLoader);
+			
+			String value[] = sysProperty.split(",");
 	    	List<CucumberFeature> featureList = runtimeOptions.cucumberFeatures(resourceLoader);
 	    	List<CucumberFeature> modifiedList = new ArrayList<>();
 	    	
