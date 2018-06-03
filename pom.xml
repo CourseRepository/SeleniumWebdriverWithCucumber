@@ -31,6 +31,8 @@
 				</executions>
 				<configuration>
 					<systemPropertyVariables>
+						<IsGridSetup>${is.grid}</IsGridSetup>
+						<HubUrl>${hub.url}</HubUrl>
 						<FeatureName>${feature.name}</FeatureName>
 						<TagName>${tag.name}</TagName>
 						<BrowserType>${browser.type}</BrowserType>

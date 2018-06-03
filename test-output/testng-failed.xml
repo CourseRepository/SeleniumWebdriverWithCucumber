@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test(failed)">
     <classes>
-      <class name="com.webdriver.runner.CustomGenericRunnerWithTag">
+      <class name="com.webdriver.webelementfunction.WebelementFunctionRunner">
         <methods>
-          <include name="tearDownClass"/>
-          <include name="feature"/>
           <include name="setUpClass"/>
+          <include name="feature" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
         </methods>
-      </class> <!-- com.webdriver.runner.CustomGenericRunnerWithTag -->
+      </class> <!-- com.webdriver.webelementfunction.WebelementFunctionRunner -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

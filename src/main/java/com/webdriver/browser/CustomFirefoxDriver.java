@@ -1,10 +1,15 @@
 package com.webdriver.browser;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.firefox.GeckoDriverService;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.webdriver.utils.ResourceUtils;
 
@@ -38,16 +43,56 @@ public class CustomFirefoxDriver implements BrowserConfiguration {
 	}
 	
 	public WebDriver getFirefoxDriver(){
+		FirefoxDriver driver = getNormalFirefoxDriver();
+		return driver;
+	}
+
+	private FirefoxDriver getNormalFirefoxDriver() {
 		setDriverExecutable();
 		FirefoxProfile profile = getFirefoxProfile();
 		FirefoxOptions options = getFirefoxOptions(profile);
 		FirefoxDriver driver = new FirefoxDriver(options);
 		return driver;
 	}
+	
+	private WebDriver getGridFirefoxDriver(){
+		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+		capabilities.setAcceptInsecureCerts(true);
+		capabilities.setJavascriptEnabled(true);
+		WebDriver driver = null;
+		try {
+			driver = new RemoteWebDriver(getHubUrl(), capabilities);
+		} catch (MalformedURLException e) {
+			throw new RuntimeException(e.getMessage());
+		}
+		return driver;
+	}
 
 	@Override
 	public WebDriver getBrowserDriver() {
-		return getFirefoxDriver();
+		if(isGridSetup())
+			return getGridFirefoxDriver();
+		else
+			return getFirefoxDriver();
+	}
+
+	@Override
+	public boolean isGridSetup() {
+		String property = System.getProperty("IsGridSetup");
+		
+		if(null == property || property.isEmpty() || "false".equalsIgnoreCase(property))
+			return false;
+		return true;
+	}
+
+	@Override
+	public URL getHubUrl() throws MalformedURLException {
+		String property = System.getProperty("HubUrl");
+		
+		if(null == property || property.isEmpty())
+			throw new RuntimeException("Invalid Hub url");
+		
+		return new URL(property);
 	}
 
 }
