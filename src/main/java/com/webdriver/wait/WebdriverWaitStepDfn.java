@@ -139,4 +139,19 @@ public class WebdriverWaitStepDfn {
 		};
 		return wait;
 	}
+	
+	private Function<WebDriver, WebElement> customWaitWithParameter(By locator,String value){
+		Function<WebDriver, WebElement> wait = new Function<WebDriver, WebElement>() {
+			
+			@Override
+			public WebElement apply(WebDriver t) {
+				if(t.findElements(locator).size() >= 1 && t.findElement(locator).getText().equalsIgnoreCase(value)){
+					return t.findElement(locator);
+				}
+				System.out.println("Waiting...");
+				return null;
+			}
+		};
+		return wait;
+	}
 }
