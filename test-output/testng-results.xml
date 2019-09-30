@@ -1,103 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="103371" started-at="2018-06-03T07:17:48Z" finished-at="2018-06-03T07:19:31Z">
+  <suite name="Default suite" duration-ms="87238" started-at="2019-09-21T06:39:27Z" finished-at="2019-09-21T06:40:54Z">
     <groups>
-      <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.wait.WebdriverWaitFunctionRunner@6e1ec318]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
-        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.webelementfunction.WebelementFunctionRunner@10bdf5e5]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
-        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.browserfunction.BrowserFunctionRunner@67784306]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
-        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.iframes.IframesRunner@185d8b6]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
-      </group> <!-- cucumber -->
     </groups>
-    <test name="ChromeTest" duration-ms="71014" started-at="2018-06-03T07:17:48Z" finished-at="2018-06-03T07:18:59Z">
-      <class name="com.webdriver.wait.WebdriverWaitFunctionRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.webdriver.wait.WebdriverWaitFunctionRunner@6e1ec318]" name="setUpClass" is-config="true" duration-ms="38" started-at="2018-06-03T12:48:31Z" finished-at="2018-06-03T12:48:31Z">
+    <test name="Default test" duration-ms="87238" started-at="2019-09-21T06:39:27Z" finished-at="2019-09-21T06:40:54Z">
+      <class name="com.webdriver.datadriven.exceldriven.TestExcelReader">
+        <test-method status="PASS" signature="testExcel()[pri:0, instance:com.webdriver.datadriven.exceldriven.TestExcelReader@3427b02d]" name="testExcel" duration-ms="87207" started-at="2019-09-20T23:39:27Z" finished-at="2019-09-20T23:40:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.wait.WebdriverWaitFunctionRunner@6e1ec318]" name="feature" duration-ms="27711" started-at="2018-06-03T12:48:31Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-06-03T12:48:59Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Web driver wait fuction]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.webdriver.wait.WebdriverWaitFunctionRunner@6e1ec318]" name="tearDownClass" is-config="true" duration-ms="0" started-at="2018-06-03T12:48:59Z" finished-at="2018-06-03T12:48:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- com.webdriver.wait.WebdriverWaitFunctionRunner -->
-      <class name="com.webdriver.webelementfunction.WebelementFunctionRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.webdriver.webelementfunction.WebelementFunctionRunner@10bdf5e5]" name="setUpClass" is-config="true" duration-ms="234" started-at="2018-06-03T12:47:48Z" finished-at="2018-06-03T12:47:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.webelementfunction.WebelementFunctionRunner@10bdf5e5]" name="feature" duration-ms="42938" started-at="2018-06-03T12:47:48Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-06-03T12:48:31Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Web Element Functions]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.webdriver.webelementfunction.WebelementFunctionRunner@10bdf5e5]" name="tearDownClass" is-config="true" duration-ms="2" started-at="2018-06-03T12:48:31Z" finished-at="2018-06-03T12:48:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- com.webdriver.webelementfunction.WebelementFunctionRunner -->
-    </test> <!-- ChromeTest -->
-    <test name="FirefoxTest" duration-ms="32334" started-at="2018-06-03T07:18:59Z" finished-at="2018-06-03T07:19:31Z">
-      <class name="com.webdriver.browserfunction.BrowserFunctionRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.webdriver.browserfunction.BrowserFunctionRunner@67784306]" name="setUpClass" is-config="true" duration-ms="32" started-at="2018-06-03T12:49:16Z" finished-at="2018-06-03T12:49:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.browserfunction.BrowserFunctionRunner@67784306]" name="feature" duration-ms="15433" started-at="2018-06-03T12:49:16Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-06-03T12:49:31Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Browser Function]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.webdriver.browserfunction.BrowserFunctionRunner@67784306]" name="tearDownClass" is-config="true" duration-ms="0" started-at="2018-06-03T12:49:31Z" finished-at="2018-06-03T12:49:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- com.webdriver.browserfunction.BrowserFunctionRunner -->
-      <class name="com.webdriver.iframes.IframesRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.webdriver.iframes.IframesRunner@185d8b6]" name="setUpClass" is-config="true" duration-ms="19" started-at="2018-06-03T12:48:59Z" finished-at="2018-06-03T12:48:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.iframes.IframesRunner@185d8b6]" name="feature" duration-ms="16836" started-at="2018-06-03T12:48:59Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-06-03T12:49:16Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Working with Iframe]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.webdriver.iframes.IframesRunner@185d8b6]" name="tearDownClass" is-config="true" duration-ms="0" started-at="2018-06-03T12:49:16Z" finished-at="2018-06-03T12:49:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- com.webdriver.iframes.IframesRunner -->
-    </test> <!-- FirefoxTest -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- testExcel -->
+      </class> <!-- com.webdriver.datadriven.exceldriven.TestExcelReader -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

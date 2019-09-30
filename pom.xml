@@ -30,13 +30,9 @@
 					</execution>
 				</executions>
 				<configuration>
-					<systemPropertyVariables>
-						<IsGridSetup>${is.grid}</IsGridSetup>
-						<HubUrl>${hub.url}</HubUrl>
-						<FeatureName>${feature.name}</FeatureName>
-						<TagName>${tag.name}</TagName>
-						<BrowserType>${browser.type}</BrowserType>
-					</systemPropertyVariables>
+					<!-- <systemPropertyVariables> <IsGridSetup>${is.grid}</IsGridSetup> 
+						<HubUrl>${hub.url}</HubUrl> <FeatureName>${feature.name}</FeatureName> <TagName>${tag.name}</TagName> 
+						<BrowserType>${browser.type}</BrowserType> </systemPropertyVariables> -->
 					<forkCount>3</forkCount> <!-- how many parallel vm get created and execute -->
 					<reuseForks>false</reuseForks><!-- Every it will create a new vm for 
 						the execution and will not use any existing -->
@@ -145,6 +141,11 @@
 			<artifactId>cucumber-reports</artifactId>
 			<version>1.3.3</version>
 			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>com.paulhammant</groupId>
+			<artifactId>ngwebdriver</artifactId>
+			<version>1.0</version>
 		</dependency>
 	</dependencies>
 </project>

@@ -8,7 +8,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -50,7 +49,7 @@ public class AlertsStepDfn {
 	@When("^Alerts_I click on try it button , it should show the alert$")
 	public void alerts_i_click_on_try_it_button_it_should_show_the_alert() throws Throwable {
 	    WebDriverWait wait = getWait(driver, 60);
-	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("tryhome")));
+	    wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy((By.id("tryhome"))));
 	    wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.id("iframeResult")));
 	    buttonHelper.click(By.xpath("//button[text()='Try it']"));
 	}
