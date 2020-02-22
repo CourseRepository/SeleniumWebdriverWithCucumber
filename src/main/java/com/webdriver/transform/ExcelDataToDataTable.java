@@ -1,6 +1,7 @@
 package com.webdriver.transform;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -23,10 +24,12 @@ public class ExcelDataToDataTable extends Transformer<DataTable> {
 
 	@Override
 	public DataTable transform(String filename) {
-		String path = getFilePath(filename);
+		ArrayList<String> fileToken =  getFileTokes(filename);
+		
+		String path = getFilePath(fileToken.get(0));
 		ExcelReader reader = new ExcelReader.ExcelReaderBuilder()
 				.setFileLocation(path)
-				.setSheet(0)
+				.setSheet(Integer.parseInt(fileToken.get(1)))
 				.build();
 		
 		List<List<String>> excelData = getExcelData(reader);
@@ -38,6 +41,9 @@ public class ExcelDataToDataTable extends Transformer<DataTable> {
 		return table;
 	}
 
+	private ArrayList<String> getFileTokes(String filePath){
+		return new ArrayList<>(Arrays.asList(filePath.split(";")));
+	}
 
 	private String getFilePath(String filename) {
 		String path = ResourceUtils.getResourcePath(filename);

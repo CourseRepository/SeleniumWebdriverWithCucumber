@@ -2,16 +2,34 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="87238" started-at="2019-09-21T06:39:27Z" finished-at="2019-09-21T06:40:54Z">
+  <suite name="Default suite" duration-ms="121205" started-at="2020-02-22T01:32:45Z" finished-at="2020-02-22T01:34:46Z">
     <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.datadriven.DataDrivenRunner@1d9b7cce]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="87238" started-at="2019-09-21T06:39:27Z" finished-at="2019-09-21T06:40:54Z">
-      <class name="com.webdriver.datadriven.exceldriven.TestExcelReader">
-        <test-method status="PASS" signature="testExcel()[pri:0, instance:com.webdriver.datadriven.exceldriven.TestExcelReader@3427b02d]" name="testExcel" duration-ms="87207" started-at="2019-09-20T23:39:27Z" finished-at="2019-09-20T23:40:54Z">
+    <test name="Default test" duration-ms="121205" started-at="2020-02-22T01:32:45Z" finished-at="2020-02-22T01:34:46Z">
+      <class name="com.webdriver.datadriven.DataDrivenRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.webdriver.datadriven.DataDrivenRunner@1d9b7cce]" name="setUpClass" is-config="true" duration-ms="332" started-at="2020-02-21T17:32:45Z" finished-at="2020-02-21T17:32:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testExcel -->
-      </class> <!-- com.webdriver.datadriven.exceldriven.TestExcelReader -->
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.webdriver.datadriven.DataDrivenRunner@1d9b7cce]" name="feature" duration-ms="120758" started-at="2020-02-21T17:32:45Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-02-21T17:34:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Data Driven Testing]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.webdriver.datadriven.DataDrivenRunner@1d9b7cce]" name="tearDownClass" is-config="true" duration-ms="2" started-at="2020-02-21T17:34:46Z" finished-at="2020-02-21T17:34:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.webdriver.datadriven.DataDrivenRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
